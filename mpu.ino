@@ -1,5 +1,5 @@
 #include "I2Cdev.h"
-#include "MPU9250.h" // <-- 1. USA LA LIBRERÍA PARA TU SENSOR
+#include "MPU9250.h" // <-- 1. USA LA LIBRERÍA PARA 9250
 #include "Wire.h"
 
 MPU9250 IMU; // <-- 2. USA EL OBJETO MPU9250
@@ -9,8 +9,7 @@ int ax_raw, ay_raw, az_raw;
 int gx_raw, gy_raw, gz_raw;
 
 // ================================================================
-// ¡PEGA TUS OFFSETS AQUÍ! (Paso 3.2)
-// Reemplaza estos ceros con los valores que obtuviste
+// OFFSETS  (Paso 3.2)
 // ================================================================
 int ax_o = -5420;
 int ay_o = -6256;
@@ -120,3 +119,4 @@ void loop() {
   // Un pequeño delay para no saturar el Serial, pero el 'dt' se encarga del cálculo
   delay(10); 
 }
+
